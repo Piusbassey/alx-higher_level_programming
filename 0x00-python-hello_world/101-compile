@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+import py_compile
+import os
+
+# Check if the PYFILE environment variable is set
+pyfile = os.environ.get("PYFILE")
+if not pyfile:
+    print("Error: PYFILE environment variable is not set.")
+    exit(1)
+
+# Generate the output filename by appending 'c' to the original filename
+output_filename = f"{pyfile}c"
+
+try:
+    # Compile the Python script and generate the .pyc file
+    py_compile.compile(pyfile, cfile=output_filename, doraise=True)
+    print(f"Compilation successful. Output filename: {output_filename}")
+except py_compile.PyCompileError as e:
+    print(f"Compilation failed: {e}")
+    exit(1)
