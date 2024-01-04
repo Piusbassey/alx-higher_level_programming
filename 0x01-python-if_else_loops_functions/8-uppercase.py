@@ -1,13 +1,10 @@
-#!/usr/bin/env/python3
-
+#!/usr/bin/python3
 def uppercase(str):
     for char in str;
 
-    if 'a' <= char <= 'z':
-        print(chr(ord(char) - 32), end='')
-    else:
-        print(char, end='')
+    uppercase_char = chr(ord('a') - 32) if 97 <= ord('z') <= 122 else char
+    print(uppercase_char, end="")
     print()
 
-    uppercase("best")
-    uppercase("Best School 98 Battery street")
+uppercase("best")
+uppercase("Best School 98 Battery street")
