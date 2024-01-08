@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+def replace_in_list(my_list, idx, element):
+    """
+    Replaces an element in the list at a specific position.
+
+    :param my_list: The input list.
+    :param idx: The index at which the element should be replaced.
+    :param element: The new element to replace at the specified index.
+    :return: The original list.
+    """
+    if idx < 0 or idx >= len(my_list):
+        return my_list
+    else:
+        my_list[idx] = element
+        return my_list
+
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+new_element = 9
+new_list = replace_in_list(my_list, idx, new_element)
+
+
+print(new_list)
+print(my_list)
