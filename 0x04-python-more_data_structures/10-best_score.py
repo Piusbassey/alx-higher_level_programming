@@ -18,8 +18,5 @@ if __name__ == "__main__":
 
     new_dict = multiply_by_2(a_dictionary)
     print(new_dict)
-
     print("--")
-
     print(a_dictionary)
-
