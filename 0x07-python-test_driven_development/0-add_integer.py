@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+python3 -c 'print(__import__("0-add_integer").add_integer.__doc__)'
 def add_integer(a, b=98):
     """
     Adds two numbers and returns an integer
