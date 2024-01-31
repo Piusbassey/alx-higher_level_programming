@@ -1,0 +1,20 @@
+Test the lazy_matrix_mul function.
+
+	>>> from 101-lazy_matrix_mul import lazy_matrix_mul
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+array([[ 7, 10],
+		[15, 22]])
+	>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+	array([[13, 16]])
+>>> lazy_matrix_mul([], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+		...
+			ValueError: m_a can't be empty
+			>>> lazy_matrix_mul([[1, 2], [3, 4]], "hello")
+			Traceback (most recent call last):
+				...
+	TypeError: m_b must be a list
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2]])
+	Traceback (most recent call last):
+		...
+			ValueError: m_a and m_b can't be multiplied
