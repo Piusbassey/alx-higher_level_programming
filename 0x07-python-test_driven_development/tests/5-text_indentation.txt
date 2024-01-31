@@ -1,0 +1,17 @@
+Test the text_indentation function.
+
+>>> from 5-text_indentation import text_indentation
+>>> text_indentation("Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere.")
+Plus semper voluptatis?
+
+Teneo, inquit, finem illi videri nihil dolere.
+
+>>> text_indentation("Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus.")
+Si id dicis, vicimus.
+
+Inde sermone vario sex illa a Dipylo stadia confecimus.
+
+>>> text_indentation(123)
+	Traceback (most recent call last):
+		...
+			TypeError: text must be a string
