@@ -5,27 +5,16 @@ class MyInt(int):
 
     Inherits from the int class.
     """
-
-    def __eq__(self, other):
-        """
-        Overrides the equality operator (==) to return True if the values are not equal.
-
-        Args:
-            other: The value to compare with.
-
-        Returns:
-            bool: True if the values are not equal; False otherwise.
-        """
+    class MyInt(int):
+        def __eq__(self, other):
+            # Invert the behavior of ==
         return super().__ne__(other)
 
     def __ne__(self, other):
-        """
-        Overrides the inequality operator (!=) to return True if the values are equal.
-
-        Args:
-            other: The value to compare with.
-
-        Returns:
-            bool: True if the values are equal; False otherwise.
-        """
+        # Invert the behavior of !=
         return super().__eq__(other)
+
+my_i = MyInt(3)
+print(my_i)       # Output: 3
+print(my_i == 3)  # Output: False
+print(my_i != 3)  # Output: True
