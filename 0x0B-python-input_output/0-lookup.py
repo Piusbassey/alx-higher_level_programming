@@ -9,4 +9,4 @@ obj: Any object.
 Returns:
 List of the attributes and methods.
 	"""
-return dir(obj)
+	return [attr for attr in dir(obj) if not attr.startswith('__')]
